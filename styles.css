@@ -46,6 +46,23 @@ em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.0
 
 ::selection{background:var(--orange);color:#fff}
 
+/* ── accessible focus ─────────────────────── */
+:focus-visible{
+  outline:3px solid var(--blue);
+  outline-offset:3px;
+  border-radius:6px;
+}
+.section--dark :focus-visible{outline-color:var(--lime)}
+.skip-link{
+  position:fixed;top:.6rem;left:.6rem;z-index:10000;
+  padding:.7em 1.2em;border-radius:100px;
+  background:var(--ink);color:var(--paper);
+  font-family:var(--mono);font-size:.78rem;
+  transform:translateY(-160%);
+  transition:transform .35s var(--ease);
+}
+.skip-link:focus-visible{transform:none}
+
 /* ── grain ─────────────────────────── */
 .grain{
   position:fixed;inset:-150%;z-index:9999;pointer-events:none;opacity:.05;
