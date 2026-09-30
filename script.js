@@ -42,10 +42,19 @@
     });
   }
 
-  /* ── nav stuck state ─────────────── */
+  /* ── nav stuck state + scroll progress ─────────────── */
   const nav = document.getElementById('nav');
-  const onScroll = () => nav?.classList.toggle('is-stuck', scrollY > 24);
+  const fill = document.getElementById('scrollbarFill');
+
+  const onScroll = () => {
+    nav?.classList.toggle('is-stuck', scrollY > 24);
+    if (fill) {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      fill.style.width = `${max > 0 ? (scrollY / max) * 100 : 0}%`;
+    }
+  };
   addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', onScroll, { passive: true });
   onScroll();
 
   /* ── magnetic buttons ─────────────── */
