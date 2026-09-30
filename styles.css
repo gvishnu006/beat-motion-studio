@@ -312,6 +312,7 @@ em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.0
   white-space:nowrap;color:var(--ink-soft);
 }
 .ticker i{color:var(--orange);font-style:normal;font-size:1rem}
+.marquee:hover .marquee__row{animation-play-state:paused}
 @keyframes slide{to{transform:translateX(-50%)}}
 
 /* ── stats ─────────────────────────── */
@@ -579,6 +580,29 @@ em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.0
 .step h3{font-size:1.32rem;margin-bottom:.6rem;letter-spacing:-.02em}
 .step p{font-size:.94rem;color:var(--ink-soft)}
 .step p em{color:var(--ink)}
+
+/* ── voices marquee ─────────────────────── */
+.voices{
+  background:var(--paper-2);border-block:1px solid var(--line);
+  padding:clamp(4rem,10vh,6.5rem) 0;overflow:hidden;
+}
+.voices .tag{margin-inline:clamp(1.15rem,5vw,4rem)}
+.marquee{overflow:hidden;margin-top:2.5rem}
+.marquee__row{display:flex;width:max-content;animation:slide 38s linear infinite}
+.marquee__set{display:flex;gap:1.2rem;padding-right:1.2rem;flex:none}
+.quote{
+  width:min(76vw,400px);margin:0;padding:1.8rem 1.7rem;
+  border-radius:var(--r-m);background:var(--paper);
+  box-shadow:0 1px 0 var(--line);
+  display:flex;flex-direction:column;justify-content:space-between;gap:1.4rem;
+  transition:transform .5s var(--ease-back),box-shadow .5s var(--ease);
+}
+.quote:hover{transform:translateY(-8px) rotate(-1.2deg);box-shadow:0 20px 36px -20px rgba(22,19,15,.45)}
+.quote blockquote{margin:0;font-family:var(--serif);font-size:1.28rem;line-height:1.32;letter-spacing:-.015em}
+.quote figcaption{
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-soft);
+}
 
 /* ── cta ─────────────────────────── */
 .cta{
