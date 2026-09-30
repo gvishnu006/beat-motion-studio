@@ -312,6 +312,39 @@
     setTimeout(bounce, 800);
   }
 
+  /* ── mobile sheet ─────────────── */
+  const burger = document.getElementById('burger');
+  const sheet = document.getElementById('sheet');
+
+  const setMenu = (open) => {
+    if (!burger || !sheet) return;
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.style.overflow = open ? 'hidden' : '';
+
+    if (open) {
+      sheet.hidden = false;
+      requestAnimationFrame(() => sheet.classList.add('is-open'));
+    } else {
+      sheet.classList.remove('is-open');
+      setTimeout(() => { sheet.hidden = true; }, 700);
+    }
+  };
+
+  burger?.addEventListener('click', () => {
+    setMenu(burger.getAttribute('aria-expanded') !== 'true');
+  });
+  sheet?.querySelectorAll('a[href^="#"]').forEach((a) =>
+    a.addEventListener('click', () => setMenu(false))
+  );
+  addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && burger?.getAttribute('aria-expanded') === 'true') setMenu(false);
+  });
+  // reset if resized up to desktop
+  matchMedia('(min-width: 861px)').addEventListener('change', (e) => {
+    if (e.matches && burger?.getAttribute('aria-expanded') === 'true') setMenu(false);
+  });
+
   /* ── smooth anchor scroll (offset for fixed nav) ─────────────── */
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener('click', (e) => {
