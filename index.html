@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BEAT — UI &amp; UX Motion Studio</title>
+<meta name="description" content="BEAT is a UI & UX motion studio. We design interfaces that move like people do — warm, human, alive." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='42' fill='%23FF5C39'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<!-- grain + cursor -->
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav__logo" data-cursor="top">
+    <span class="nav__dot"></span>BEAT
+  </a>
+  <nav class="nav__links">
+    <a href="#work" data-magnetic>Work</a>
+    <a href="#lab" data-magnetic>Motion Lab</a>
+    <a href="#process" data-magnetic>Process</a>
+    <a href="#contact" data-magnetic>Contact</a>
+  </nav>
+  <a href="#contact" class="btn btn--sm" data-magnetic data-cursor="say hi">
+    Start a project
+  </a>
+</header>
+
+<main id="top">
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="hero">
+    <div class="hero__grid">
+
+      <p class="hero__eyebrow reveal" data-d="0">
+        <span class="pill"><span class="pill__blink"></span>Motion design studio · Est. 2019</span>
+      </p>
+
+      <h1 class="hero__title">
+        <span class="line reveal" data-d="1">Interfaces</span>
+        <span class="line reveal" data-d="2">
+          that
+          <em class="squiggle-wrap">breathe<svg class="squiggle" viewBox="0 0 240 24" preserveAspectRatio="none"><path d="M2 16 C 40 4, 80 22, 118 12 S 196 4, 238 14" /></svg></em>
+        </span>
+        <span class="line reveal" data-d="3">like <span class="word-cycle"><span id="cycle"></span><span class="word-cycle__cursor"></span></span></span>
+      </h1>
+
+      <p class="hero__sub reveal" data-d="4">
+        We're a small studio that treats motion as <em>character</em>, not decoration.
+        Every easing curve we ship is tuned by hand — because your product should
+        feel like it has a pulse, not a transition.
+      </p>
+
+      <div class="hero__cta reveal" data-d="5">
+        <a href="#work" class="btn btn--primary" data-magnetic data-cursor="watch">
+          See the work
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#lab" class="btn btn--ghost" data-magnetic data-cursor="play">Open the motion lab</a>
+      </div>
+
+      <!-- floating blobs -->
+      <div class="blob blob--a" data-parallax="0.06"></div>
+      <div class="blob blob--b" data-parallax="-0.09"></div>
+      <div class="blob blob--c" data-parallax="0.14"></div>
+
+      <!-- hand drawn arrow -->
+      <svg class="hero__arrow" viewBox="0 0 120 90" fill="none" aria-hidden="true">
+        <path class="draw" d="M6 8c22 34 44 56 74 62" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <path class="draw" d="M62 78l20-6-4-20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__row">
+        <div class="ticker__set">
+          <span>Micro-interactions</span><i>✳</i><span>Design systems</span><i>✳</i>
+          <span>Motion language</span><i>✳</i><span>Prototyping</span><i>✳</i>
+          <span>Onboarding flows</span><i>✳</i><span>Brand in motion</span><i>✳</i>
+        </div>
+        <div class="ticker__set">
+          <span>Micro-interactions</span><i>✳</i><span>Design systems</span><i>✳</i>
+          <span>Motion language</span><i>✳</i><span>Prototyping</span><i>✳</i>
+          <span>Onboarding flows</span><i>✳</i><span>Brand in motion</span><i>✳</i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ MARQUEE STATS ══════════ -->
+  <section class="stats">
+    <div class="stat reveal"><span class="stat__num" data-count="148">0</span><span class="stat__lbl">products shipped</span></div>
+    <div class="stat reveal" data-d="1"><span class="stat__num" data-count="26">0</span><span class="stat__lbl">awards, no big deal</span></div>
+    <div class="stat reveal" data-d="2"><span class="stat__num" data-count="9">0</span><span class="stat__lbl">years of easing curves</span></div>
+    <div class="stat reveal" data-d="3"><span class="stat__num" data-count="4">0</span><span class="stat__lbl">humans on the studio</span></div>
+  </section>
+
+  <!-- ══════════ WORK ══════════ -->
+  <section class="section" id="work">
+    <header class="section__head">
+      <span class="tag reveal">01 / Selected work</span>
+      <h2 class="reveal" data-d="1">Things we made<br /><em>move on purpose.</em></h2>
+    </header>
+
+    <div class="cards">
+      <article class="card reveal" data-tilt data-cursor="view">
+        <div class="card__art card__art--1">
+          <div class="ui-mock">
+            <div class="ui-mock__bar"><span></span><span></span><span></span></div>
+            <div class="ui-mock__row"><b></b><div class="ui-mock__lines"><i></i><i></i></div></div>
+            <div class="ui-mock__row ui-mock__row--shift"><b></b><div class="ui-mock__lines"><i></i><i></i></div></div>
+            <div class="ui-mock__pill"></div>
+          </div>
+        </div>
+        <div class="card__meta">
+          <h3>Ledger</h3>
+          <p>Fintech · Onboarding that cut drop-off by 34%</p>
+          <span class="card__year">2025</span>
+        </div>
+      </article>
+
+      <article class="card reveal" data-d="1" data-tilt data-cursor="view">
+        <div class="card__art card__art--2">
+          <div class="wave"></div>
+          <div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="card__meta">
+          <h3>Hearth</h3>
+          <p>Audio streaming · A player that breathes with you</p>
+          <span class="card__year">2025</span>
+        </div>
+      </article>
+
+      <article class="card reveal" data-d="2" data-tilt data-cursor="view">
+        <div class="card__art card__art--3">
+          <div class="orbit"><i></i><i></i><i></i></div>
+          <div class="orbit__core"></div>
+        </div>
+        <div class="card__meta">
+          <h3>Cadence</h3>
+          <p>Health app · Habits that don't nag you</p>
+          <span class="card__year">2024</span>
+        </div>
+      </article>
+
+      <article class="card reveal" data-d="3" data-tilt data-cursor="view">
+        <div class="card__art card__art--4">
+          <div class="stack"><i></i><i></i><i></i></div>
+        </div>
+        <div class="card__meta">
+          <h3>Orbit OS</h3>
+          <p>Design system · 120 components, 1 motion language</p>
+          <span class="card__year">2024</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ══════════ MOTION LAB ══════════ -->
+  <section class="section section--dark" id="lab">
+    <header class="section__head">
+      <span class="tag reveal">02 / Motion lab</span>
+      <h2 class="reveal" data-d="1">Play with the <em>curves.</em></h2>
+      <p class="section__lead reveal" data-d="2">
+        Every animation below runs on a spring model we tuned by hand. Drag, tap, poke at them.
+        Nothing here is a CSS preset.
+      </p>
+    </header>
+
+    <div class="lab">
+      <!-- toggle -->
+      <div class="lab__cell reveal">
+        <span class="lab__name">Spring toggle</span>
+        <button class="switch" id="switch" aria-pressed="false" data-magnetic data-cursor="click">
+          <span class="switch__knob"></span>
+        </button>
+        <span class="lab__hint">spring · stiffness 320 · damping 18</span>
+      </div>
+
+      <!-- drag -->
+      <div class="lab__cell reveal" data-d="1">
+        <span class="lab__name">Drag to fling</span>
+        <div class="dragbox" id="dragbox"><div class="dragbox__inner">drag me</div></div>
+        <span class="lab__hint">inertia · decay 0.94</span>
+      </div>
+
+      <!-- magnify -->
+      <div class="lab__cell reveal" data-d="2">
+        <span class="lab__name">Magnifier</span>
+        <div class="magnify" id="magnify">
+          <div class="magnify__lens"></div>
+          <span>hover me</span>
+        </div>
+        <span class="lab__hint">scale 2.4 · border-radius follow</span>
+      </div>
+
+      <!-- ripple -->
+      <div class="lab__cell reveal" data-d="3">
+        <span class="lab__name">Ripple burst</span>
+        <button class="ripple-target" id="ripple" data-magnetic data-cursor="boom">
+          <span>click me</span>
+        </button>
+        <span class="lab__hint">radial wave · 480ms decay</span>
+      </div>
+
+      <!-- slider -->
+      <div class="lab__cell lab__cell--wide reveal" data-d="4">
+        <span class="lab__name">Easing playground</span>
+        <div class="track" id="track">
+          <div class="track__ball" id="ball"></div>
+          <div class="track__curve" id="curve">
+            <svg viewBox="0 0 100 34" preserveAspectRatio="none" width="100%" height="34">
+              <path d="M0 34 C 26 34 62 4 100 0" />
+            </svg>
+          </div>
+        </div>
+        <div class="ease-buttons">
+          <button data-ease="linear" data-magnetic>linear</button>
+          <button data-ease="easeOutBack" data-magnetic>easeOutBack</button>
+          <button data-ease="cubic-bezier(.16,1,.3,1)" data-magnetic>expo out</button>
+          <button data-ease="cubic-bezier(.68,-.55,.27,1.55)" data-magnetic>overshoot</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PROCESS ══════════ -->
+  <section class="section" id="process">
+    <header class="section__head">
+      <span class="tag reveal">03 / How we work</span>
+      <h2 class="reveal" data-d="1">Four steps.<br /><em>Zero drama.</em></h2>
+    </header>
+
+    <div class="steps">
+      <div class="step reveal" data-d="0">
+        <span class="step__n">01</span>
+        <h3>Listen</h3>
+        <p>We ask what your product should <em>feel</em> like before we touch a single keyframe.</p>
+      </div>
+      <div class="step reveal" data-d="1">
+        <span class="step__n">02</span>
+        <h3>Sketch in motion</h3>
+        <p>Static frames lie. We prototype the transition on day one, in the browser.</p>
+      </div>
+      <div class="step reveal" data-d="2">
+        <span class="step__n">03</span>
+        <h3>Tune by hand</h3>
+        <p>Springs, not presets. We adjust stiffness until the timing matches your brand voice.</p>
+      </div>
+      <div class="step reveal" data-d="3">
+        <span class="step__n">04</span>
+        <h3>Hand over the system</h3>
+        <p>You get tokens, docs, and a Figma kit your engineers will actually use.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="cta" id="contact">
+    <div class="cta__inner">
+      <span class="tag reveal">04 / Say hello</span>
+      <h2 class="cta__title">
+        <span class="reveal">Let's make it</span>
+        <span class="reveal" data-d="1"><em>move.</em></span>
+      </h2>
+      <p class="cta__sub reveal" data-d="2">
+        We take on four projects a quarter. If yours is one of them,
+        drop a line — we reply within a day, usually with coffee on.
+      </p>
+      <div class="cta__actions reveal" data-d="3">
+        <a href="mailto:hello@beat.studio" class="btn btn--primary btn--lg" data-magnetic data-cursor="write">
+          hello@beat.studio
+        </a>
+        <a href="#top" class="btn btn--ghost btn--lg" data-magnetic data-cursor="top">Back to top ↑</a>
+      </div>
+    </div>
+    <div class="cta__orb" aria-hidden="true"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© 2026 BEAT Motion Studio</span>
+  <span class="footer__mid">Made with too many easing curves</span>
+  <span>Remote · Worldwide</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "beat-motion-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BEAT — UI & UX motion studio. Animated showcase site.",
+  "scripts": {
+    "dev": "npx --yes serve .",
+    "start": "npx --yes serve ."
+  },
+  "keywords": ["ui", "ux", "motion", "animation", "design", "studio"]
+}
